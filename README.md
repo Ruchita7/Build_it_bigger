@@ -68,27 +68,27 @@ Add free and paid product flavors to your app. Remove the ad (and any dependenci
 
 To exceed expectations, do the following:
 
-  1. Add Interstitial Ad
+  • Add Interstitial Ad
 
-   Follow these instructions to add an interstitial ad to the free version. Display the add after the user hits the button, but before the joke is shown.
+Follow these instructions to add an interstitial ad to the free version. Display the add after the user hits the button, but before the joke is shown.
 
 https://developers.google.com/mobile-ads-sdk/docs/admob/android/interstitial
 
-  2. Add Loading Indicator
+  • Add Loading Indicator
 
-    Add a loading indicator that is shown while the joke is being retrieved and disappears when the joke is ready. The following tutorial is a good place to start:
+Add a loading indicator that is shown while the joke is being retrieved and disappears when the joke is ready. The following tutorial is a good place to start:
 
 http://www.tutorialspoint.com/android/android_loading_spinner.htm
 
-  3. Configure Test Task
+  • Configure Test Task
 
-   To tie it all together, create a Gradle task that:
+To tie it all together, create a Gradle task that:
 
-   •	Launches the GCE local development server
+   (i)	Launches the GCE local development server
 
-   •	Runs all tests
+   (ii)	Runs all tests
 
-   •	Shuts the server down again
+   (iii)	Shuts the server down again
 
 ####**Rubric**
 
