@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.udacity.gradle.builditbigger.jokeconsumerlib.ConsumerMainActivity;
-import com.example.dgnc.myapplication.backend.myApi.MyApi;
+import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 
