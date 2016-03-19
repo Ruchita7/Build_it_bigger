@@ -1,120 +1,103 @@
-####**Gradle for Android and Java Final Project**
-In this project, you will create an app with multiple flavors that uses multiple libraries and Google Clould Endpoints. The finished app will consist of four modules. A Java library that provides jokes, a Google Clould Endpoints (GCE) project that serves those jokes, an Android Library containing an activity for displaying jokes, and an Android app that fetches jokes from the GCE module and passes them to the Android Library for display.
+#Build it Bigger(Gradle for Android and Java Final Project)
 
-#####**Why this Project**
+##Overview
 
-As Android projects grow in complexity, it becomes necessary to customize the behavior of the Gradle build tool, allowing automation of repetitive tasks. Particularly, factoring functionality into libraries and creating product flavors allow for much bigger projects with minimal added complexity.
+ This app is created for multiple flavors(free/paid) that uses multiple libraries and Google Clould Endpoints. The finished app will consist of four modules :
+ 
+ (i) A Java library that provides jokes,  
 
-#####**What Will I Learn?**
+ (ii) a **Google Clould Endpoints (GCE)** project that serves those jokes, 
 
-You will learn the role of Gradle in building Android Apps and how to use Gradle to manage apps of increasing complexity. You'll learn to:
-
-  •	Add free and paid flavors to an app, and set up your build to share code between them
-
-  •	Factor reusable functionality into a Java library
-
-  •	Factor reusable Android functionality into an Android library
-
-  •	Configure a multi project build to compile your libraries and app
-
-  •	Use the Gradle App Engine plugin to deploy a backend
-
-  •	Configure an integration test suite that runs against the local App Engine development server
-
-
-#####**How Do I Complete this Project?**
-
-######**Step 0: Starting Point**
-
-This is the starting point for the final project, which is provided to you in the course repository. It contains an activity with a banner ad and a button that purports to tell a joke, but actually just complains. The banner ad was set up following the instructions here:
-
-https://developers.google.com/mobile-ads-sdk/docs/admob/android/quick-start
-
-You may need to download the Google Repository from the Extras section of the Android SDK Manager.
-
-When you can build an deploy this starter code to an emulator, you're ready to move on.
-
-######**Step 1: Create a Java library**
-
-Your first task is to create a Java library that provides jokes. Create a new Gradle Java project either using the Android Studio wizard, or by hand. Then introduce a project dependency between your app and the new Java Library. If you need review, check out demo 4.01 from the course code.
-
-Make the button display a toast showing a joke retrieved from your Java joke telling library.
-
-######**Step 2: Create an Android Library**
-
-Create an Android Library containing an Activity that will display a joke passed to it as an intent extra. Wire up project dependencies so that the button can now pass the joke from the Java Library to the Android Library.
-
-For review on how to create an Android library, check out demo 4.03. For a refresher on intent extras, check out;
-
-http://developer.android.com/guide/components/intents-filters.html
-
-######**Step 3: Create GCE Module**
-
-This next task will be pretty tricky. Instead of pulling jokes directly from our Java library, we'll set up a Google Cloud Endpoints development server, and pull our jokes from there. Follow the instructions in the following tutorial to add a Google Could Endpoints module to your project:
-
-https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
-
-Introduce a project dependency between your Java library and your GCE module, and modify the GCE starter code to pull jokes from your Java library. Create an Async task to retrieve jokes. Make the button kick off a task to retrieve a joke, then launch the activity from your Android Library to display it.
-
-######**Step 4: Add Functional Tests**
-
-Add code to test that your Async task successfully retrieves a non-empty string. For a refresher on setting up Android tests, check out demo 4.09.
-
-######**Step 5: Add a Paid Flavor**
-
-Add free and paid product flavors to your app. Remove the ad (and any dependencies you can) from the paid flavor.
-
-######**Optional Tasks**
-
-To exceed expectations, do the following:
-
-  • Add Interstitial Ad
-
-Follow these instructions to add an interstitial ad to the free version. Display the add after the user hits the button, but before the joke is shown.
-
-https://developers.google.com/mobile-ads-sdk/docs/admob/android/interstitial
-
-  • Add Loading Indicator
-
-Add a loading indicator that is shown while the joke is being retrieved and disappears when the joke is ready. The following tutorial is a good place to start:
-
-http://www.tutorialspoint.com/android/android_loading_spinner.htm
-
-  • Configure Test Task
-
-To tie it all together, create a Gradle task that:
-
-   (i)	Launches the GCE local development server
-
-   (ii)	Runs all tests
-
-   (iii)	Shuts the server down again
-
-####**Rubric**
-
-#####**Required Components**
-
-  •	Project contains a Java library for supplying jokes
+ (iii) an Android Library containing an activity for displaying jokes, 
+ 
+ (iv) and an Android app that fetches jokes from the GCE module and passes them to the Android Library for display
   
-  •	Project contains an Android library with an activity that displays jokes passed to it as intent extras.
-  
-  •	Project contains a Google Cloud Endpoints module that supplies jokes from the Java library. Project loads jokes from GCE module via an async task.
-  
-  •	Project contains connected tests to verify that the async task is indeed loading jokes.
-  
-  •	Project contains paid/free flavors. The paid flavor has no ads, and no unnecessary dependencies.
+This app helped me to learn how to
+ 
+* Add free and paid flavors to an app, and set up your build to share code between them
+ * Factor reusable functionality into a Java library
+ * Factor reusable Android functionality into an Android library
+ * Configure a multi project build to compile your libraries and app
+ * Use the Gradle App Engine plugin to deploy a backend
+ * Configure an integration test suite that runs against the local App Engine development server
+
+![Screenshot1](https://cloud.githubusercontent.com/assets/15085932/13897291/aa33b43e-edd2-11e5-9deb-0229fa396b7f.png)
+![Screenshot2](https://cloud.githubusercontent.com/assets/15085932/13897290/aa316d82-edd2-11e5-9aca-b7cd58862a32.png)
+![Screenshot3](https://cloud.githubusercontent.com/assets/15085932/13897292/aa3add40-edd2-11e5-990d-0c2f17d05354.png)
+![Screenshot4](https://cloud.githubusercontent.com/assets/15085932/13897289/aa2e307c-edd2-11e5-868c-9524cec2bad4.png)
 
 
-######**Required Behavior**
+##Prerequisites
 
-App retrieves jokes from Google Cloud Endpoints module and displays them via an Activity from the Android Library.
-Optional Components
+* The app is built with compileSdkVersion 23 and requires [JDK 7](http://oracle.com/technetwork/java/javase/downloads/index.html) or higher
+ 
+* Android Studio
 
-To receive **"exceeds specifications"**, your app must fully implement all of the following items.
+The app source code is provided in the course [repository](https://github.com/udacity/ud867/tree/master/FinalProject). It contains an activity with a banner ad and a button that purports to tell a joke, but actually just complains. The banner ad was set up following the instructions [here](:https://developers.google.com/mobile-ads-sdk/docs/admob/android/quick-start)
 
-  •	The free app variant displays interstitial ads between the main activity and the joke-displaying activity.
-  
-  •	The app displays a loading indicator while the joke is being fetched from the server.
-  
-  •	The root build.gradle file contains a task that will start up the GCE development server, run all Android tests, then shutdown the development server.
+You may need to download the Google Repository from the Extras section of the Android SDK Manager
+
+###Implementation Steps###
+
+Refer [wiki](https://github.com/Ruchita7/Build_it_bigger/wiki/Implementation-steps)
+
+
+##Instructions
+
+###Get the source codes
+
+Get the source code of the library and example app, by cloning git repository or downloading archives.
+
+ * If you use **git**, execute the following command in your workspace directory.
+ 
+    `$ git clone https://github.com/Ruchita7/Build_it_bigger.git`
+    
+* If you are using Windows, try it on GitBash or Cygwin or something that supports git.
+ 
+###Import the project to Android Studio
+ 
+Once the project is cloned to disk you can import into Android Studio:
+
+ * From the toolbar select **File > Import Project**, or Import Non-Android Studio project from the Welcome Quick Start.
+
+ *  Select the directory that is cloned. If you can't see your cloned directory, click "Refresh" icon and find it.
+
+ *  Android Studio will import the project and build it. This might take minutes to complete. Even when the project window is opened, wait until the Gradle tasks are finished and indexed.
+
+ *  Connect your devices to your machine and select app from the select Run/Debug Configuration drop down.Click the Run button
+
+###Build and install using Gradle
+
+If you just want to install the app to your device, you don't have to import project to Android Studio.
+
+ •  After cloning the project, make sure **ANDROID_HOME** environment variable is set to point to your Android SDK. See [Getting Started with Gradle](https://guides.codepath.com/android/Getting-Started-with-Gradle).
+
+ •  Connect an Android device to your computer or start an Android emulator.
+
+ •  Compile the sample and install it. Run gradlew installDebug. Or if you on a Windows computer, use **gradlew.bat** instead.
+ 
+###Contributing
+
+Please follow the **"fork-and-pull"** Git workflow while contributing to this project
+
+ **Fork** the repo on GitHub
+
+ **Commit** changes to a branch in your fork
+
+ **Pull request "upstream"** with your changes
+
+ **Merge** changes in to "upstream" repo
+
+**NOTE:** Be sure to merge the latest from **"upstream"** before making a pull request!
+ 
+###FAQs
+
+**The project can no longer be compiled/imported if I move it to another directory**
+
+I typically include the dependencies in the repo and have them already linked, so if you move the project you'll need to also update the path to the dependency. To do this, modify the project.properties file of the project
+
+**I'm getting an error saying that there are multiple versions of a jar**
+
+To fix this, make sure that all the jars you are using conform to the same version. You can do this by just replacing all the problematic jars with the version you would like to use.
+ 
 
