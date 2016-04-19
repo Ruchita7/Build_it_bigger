@@ -21,11 +21,8 @@ This app helped me to learn how to
  * Use the Gradle App Engine plugin to deploy a backend
  * Configure an integration test suite that runs against the local App Engine development server
 
-![Screenshot1](https://cloud.githubusercontent.com/assets/15085932/13897291/aa33b43e-edd2-11e5-9deb-0229fa396b7f.png)
-![Screenshot2](https://cloud.githubusercontent.com/assets/15085932/13897290/aa316d82-edd2-11e5-9aca-b7cd58862a32.png)
-![Screenshot3](https://cloud.githubusercontent.com/assets/15085932/13897292/aa3add40-edd2-11e5-990d-0c2f17d05354.png)
-![Screenshot4](https://cloud.githubusercontent.com/assets/15085932/13897289/aa2e307c-edd2-11e5-868c-9524cec2bad4.png)
 
+![ezgif com-resize](https://cloud.githubusercontent.com/assets/15085932/14649300/fa5cb090-0683-11e6-8daf-286e05bc5ffa.gif)    ![ezgif com-resize 1](https://cloud.githubusercontent.com/assets/15085932/14649517/158290c8-0685-11e6-8f2f-cf4353e8223a.gif)
 
 ##Prerequisites
 
