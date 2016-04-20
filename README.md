@@ -22,7 +22,12 @@ This app helped me to learn how to
  * Configure an integration test suite that runs against the local App Engine development server
 
 
-![ezgif com-resize](https://cloud.githubusercontent.com/assets/15085932/14649300/fa5cb090-0683-11e6-8daf-286e05bc5ffa.gif)    ![ezgif com-resize 1](https://cloud.githubusercontent.com/assets/15085932/14649517/158290c8-0685-11e6-8f2f-cf4353e8223a.gif)
+![ezgif com-resize](https://cloud.githubusercontent.com/assets/15085932/14649300/fa5cb090-0683-11e6-8daf-286e05bc5ffa.gif)    
+**Free Version with ads**
+
+![ezgif com-resize 1](https://cloud.githubusercontent.com/assets/15085932/14649517/158290c8-0685-11e6-8f2f-cf4353e8223a.gif)
+
+**Paid version without ads**
 
 ##Prerequisites
 
